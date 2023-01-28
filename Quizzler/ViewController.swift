@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
-    //create an array of question and answer
+    //create an array of question and answer with structures
     let quiz = [
         Question(q: "A slug's blood is green.", a: "True"),
         Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
@@ -45,21 +45,31 @@ class ViewController: UIViewController {
         let actualAnswer = actualQuestion.answer
         
         if userAnswer == actualAnswer {
-            print("Right!")
+            //sets the button background color to green if the ansfer is true
+            sender.backgroundColor = UIColor.green
         } else {
-            print("Wrong!")
+            //sets the button background color to red if the answer is false
+            sender.backgroundColor = UIColor.red
         }
         
-        if questionNumber + 1 < quiz.count { //questionNumber reaches up to 2
+        if questionNumber + 1 < quiz.count {
+            //questionNumber reaches up to 2
             questionNumber += 1
         } else { //when questionNumber is equal to 3, questions are repeated
             questionNumber = 0
         }
-        updateUI()
+        
+        //timer for the color changes for 0.1 seconds before it becomes the standard
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+
     }
     
-    func updateUI() { //when starting, it asks questions in turn
+    @objc func updateUI() { //when starting, it asks questions in turn
         questionLabel.text = quiz[questionNumber].text
+        //at the next question and after the timer resets the red or green color to the standard
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
+        //progress Bar is equal question number(++1) + 1  / quiz count(12)
+        progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
     }
 }
-
