@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7ADEEDA298573CD0047F069 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ADEED9298573CD0047F069 /* Question.swift */; };
 		E7F6D5052985139200FF13DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F6D5042985139200FF13DE /* AppDelegate.swift */; };
 		E7F6D5072985139200FF13DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F6D5062985139200FF13DE /* SceneDelegate.swift */; };
 		E7F6D5092985139200FF13DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F6D5082985139200FF13DE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7ADEED9298573CD0047F069 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		E7F6D5012985139100FF13DE /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7F6D5042985139200FF13DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7F6D5062985139200FF13DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E7F6D5042985139200FF13DE /* AppDelegate.swift */,
 				E7F6D5062985139200FF13DE /* SceneDelegate.swift */,
 				E7F6D5082985139200FF13DE /* ViewController.swift */,
+				E7ADEED9298573CD0047F069 /* Question.swift */,
 				E7F6D50A2985139200FF13DE /* Main.storyboard */,
 				E7F6D50D2985139400FF13DE /* Assets.xcassets */,
 				E7F6D50F2985139400FF13DE /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7F6D5092985139200FF13DE /* ViewController.swift in Sources */,
+				E7ADEEDA298573CD0047F069 /* Question.swift in Sources */,
 				E7F6D5052985139200FF13DE /* AppDelegate.swift in Sources */,
 				E7F6D5072985139200FF13DE /* SceneDelegate.swift in Sources */,
 			);
