@@ -49,6 +49,13 @@ class ViewController: UIViewController {
         //when starting, it asks questions in turn
         questionLabel.text = quizBrain.getQuestionText()
         
+        let answerChoices = quizBrain.getAnswer()
+        
+        choice1.setTitle(answerChoices[0], for: .normal)
+        choice2.setTitle(answerChoices[1], for: .normal)
+        choice3.setTitle(answerChoices[2], for: .normal)
+        
+        
         //progress Bar is equal question number(++1) + 1  / quiz count(12)
         progressBar.progress = quizBrain.getProgress()
         
